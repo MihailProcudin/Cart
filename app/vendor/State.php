@@ -3,14 +3,6 @@
 class State
 {
 
-
-
-    public function __construct()
-    {
-
-        $_SESSION['products'] = $this->products;
-    }
-
     public static function add($product)
     {
         //if new item;
@@ -20,7 +12,6 @@ class State
         } else {
             Self::addToExisting($product);
         }
-        // $_SESSION['cart'] = $product;
 
         return true;
     }
